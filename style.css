@@ -1,15 +1,16 @@
-/* Reset & Basics */
-* {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
+  }  
   
   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
     text-align: center;
   }
   
@@ -85,28 +86,53 @@
   /* Birds Animation */
   .birds {
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
     pointer-events: none;
     z-index: 999;
   }
   
   .bird {
-    display: inline-block;
     position: absolute;
-    animation: flyAcross 10s linear infinite;
+    animation: flyAcross 12s linear infinite;
     font-size: 24px;
     opacity: 0.8;
   }
   
   .bird:nth-child(1) {
     top: 10px;
+    left: -60px;
     animation-delay: 0s;
     font-size: 20px;
   }
   
   .bird:nth-child(2) {
-    top: 40px;
-    animation-delay: 2s
+    top: 30px;
+    left: -120px;
+    animation-delay: 2s;
+    font-size: 26px;
   }
+  
+  .bird:nth-child(3) {
+    top: 50px;
+    left: -180px;
+    animation-delay: 4s;
+    font-size: 22px;
+  }
+  
+  @keyframes flyAcross {
+    0% {
+      left: -50px;
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(-1);
+    }
+    100% {
+      left: 100%;
+      transform: scaleX(1);
+    }
+  }
+  
