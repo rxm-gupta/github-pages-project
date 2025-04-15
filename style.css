@@ -37,9 +37,6 @@ html, body {
     transition: background-color 0.3s ease;
   }
   
-  .about:hover {
-    background-color: #e0ffe6;
-  }
   
   .about h2 {
     font-size: 2rem;
@@ -47,6 +44,7 @@ html, body {
   }
   
   .about p {
+    font-size: 1rem;
     max-width: 600px;
     margin: 0 auto 20px;
   }
@@ -69,6 +67,10 @@ html, body {
     border-radius: 25px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+  }
+  
+  .about .btn {
+    margin: 10px 10px 0;
   }
   
   .btn:hover {
